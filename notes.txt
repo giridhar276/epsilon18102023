@@ -1,0 +1,85 @@
+python 2.x  ( 2.7  )
+------------------------
+print 'hello'
+
+
+python 3.x  ( 3.7  3.8   3.11)
+print('hello')
+
+
+
+
+**** Everything in python is object ****
+**** Every object contains set of methods ****
+
+
+objects
+---------
+
+
+number     object = value
+-------
+number can be integer or decimal or octal or hexa.
+
+aval = 10
+bval = 34.43
+
+
+string
+--------
+string is defined in single or double or triple quotes.
+
+aname = 'python programming'
+bname = "unix shell scripting"
+cname = """java programming"""
+dname = '''spark programming'''
+
+- string slicing
+- string methods
+
+
+list  ( array in C )
+-------
+list contains set of elements.
+Elements can be numbers or strings or any combination.
+list is defined in [].
+
+alist = [10,20,30,40,0]
+blist = ["java","unix","oracle",45.34,34]
+
+
+tuple  ( immutable  unchangeable  uneditable)
+-------
+tuple contains set of elements.
+Elements can be numbers or strings or any combination.
+tuple is defined in ().
+*** Elements within the tuple cannot be modified directly *****
+
+
+atup = (10,20,30,40)
+
+
+
+
+dictionary ( hash  hashmap map   associativearray json )
+---------------------------------------------------
+dictionary contains key-value pairs
+
+object = { key:value , key:value , key:value .. }
+
+book   = {"chap1":10  ,"chap2":20 ,"chap3":30}
+
+
+
+
+
+set
+-----
+set is unordered collection of UNIQUE itmes of same type.
+
+
+aset = {10,10,20,20,20,30}
+
+
+
+
