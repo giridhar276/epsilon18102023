@@ -61,13 +61,18 @@ atup = (10,20,30,40)
 
 
 
-dictionary ( hash  hashmap map   associativearray json )
+dictionary ( hash  hashmap    map   associativearray     json )
 ---------------------------------------------------
 dictionary contains key-value pairs
+In dictionary , keys are always unique
+key can be either number or string used to uniquely identify the value
+value can be number or string or list or tuple or dictionary or any other complex structure.
 
 object = { key:value , key:value , key:value .. }
 
 book   = {"chap1":10  ,"chap2":20 ,"chap3":30}
+data = {1:2,3:4,5:6}
+book   = {"chap1":["rita","US"]  ,"chap2":["ram","UK'] }
 
 
 
