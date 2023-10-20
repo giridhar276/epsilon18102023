@@ -87,4 +87,184 @@ aset = {10,10,20,20,20,30}
 
 
 
+builtin functions
+-------------------------
+
+print()
+input()
+range()
+len()
+type()
+isinstance()
+dir()
+help()
+min()
+max()
+sum()
+round()
+
+
+list()
+tuple()
+str()
+dict()
+int()
+float()
+oct()
+set()
+
+How to display all the list of builtin functions and exceptions?
+
+In the console
+
+dir(__builtin__)
+
+
+
+
+
+
+
+operators
+-----------
+
+
+arithmetic operators : + - * % /
+
+relational operarators :  <   <=  >   >=   !=  ==
+
+logical operators :   and  or  not
+Eg:
+if len(name) == 6   and name.isupper():
+    # do something
+
+assignment operators :( ++ and -- are NOT allowed in python )
+val = 10
+val += 1   (or)  val = val + 1
+val -=1    (or)  val = val - 1  
+
+
+special operators :
++
+*
+in
+as
+
+
+file handling
+--------------------
+
+working with flat files  ( csv  log conf prop  txt )
+------------------------------------------------------
+read mode  ( r )
+write mode  ( w )
+append mode  ( a )
+
+
+opening the file
+-----------------
+
+syntax;   object = open(filename,mode)
+example:      fr = open("customers.txt","r")  # read mode
+
+              fw = open("customers.txt","w")  # write mode
+              case1: If file is already existing .. it overwrites the existing content
+              case2: if file is not existing ...... file will be created first
+             
+	      fa = open("customers.txt","a")   # append mode
+              case1: If file is already existing .. it appends the content to the end of file
+              case2: if file is not existing ...... file will be created first
+
+
+
+
+
+
+
+
+closing the file
+-------------------
+fobj.close()
+
+
+
+
+
+
+
+
+
+read operation
+-----------------
+
+
+
+- reading the file line by line using file object
+- fobj.readlines()
+- fobj.read()
+- using csv library
+- using pandas library
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+working with third party files ( docx   pptx pdf  .... )
+------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
