@@ -207,6 +207,54 @@ read operation
 
 
 
+exception handling
+-----------------------------
+
+There are 2 types of errors.
+
+
+- syntax error
+- semantic error or logical error or runtime error
+
+
+Handling the errors that occurs during the runtime is kwown excepion nadling.
+
+
+try     ( mandatory)
+except  ( mandatory)
+else    ( optional)
+finally (  optional)
+
+
+
+whatever we discussed so far , we call it essentials of python or core python programming.
+
+
+library | package | module | routines
+----------------------------------------
+
+There are 2 types of libraries
+
+
+builtin libraries
+-----------------------
+All the builtin libraries( which are generally used ) are installed with python by default.
+
+with anaconda-spyder :  8000+ libraries are installed
+with  IDLE           : 4000+ libraries are installed
+
+
+third party librareis
+-----------------------
+Depending on the requirement(cloud,db, ML, automations, gui, web ...), developer has to install third party library from www.pypi.org 
+
+-installing using pip tool
+-either downloading it manually from www.pypi.org
+
+
+
+
+
 
 
 
@@ -253,7 +301,14 @@ working with third party files ( docx   pptx pdf  .... )
 
 
 
+install pycharm
+install python from python.org
 
+
+-----------------------------
+
+anaconda spyder comes with python 
+(no need of installing python explicity)
 
 
 
