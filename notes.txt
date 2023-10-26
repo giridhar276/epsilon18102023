@@ -312,6 +312,104 @@ anaconda spyder comes with python
 
 
 
+re library in python ==   grep + awk + sed in linux
+
+
+re library in python 
+---------------------------
+
+- match
+- search
+- findall
+- split
+
+
+
+#############################################
+## mysql steps
+#############################################
+
+
+step1 : 
+show databases ;
+
+step2: creating your database
+create database epsilon;
+
+step3: acces your database
+use epsilon;
+
+step4:
+create table adultinfo ( workclass varchar(200) , education varchar(200), occupation varchar(500));
+
+
+step5: inserting records
+insert into adultinfo values('public','MS','Engineer');
+insert into adultinfo values('private','mbbs','doctor');
+
+
+step6:
+select * from adultinfo;
+
+
+
+steps:
+--------------
+
+step1: connect to database
+step2: define query
+step3: execute query
+step4: fetch output
+step5: close the database
+
+
+write a program to connect to the database and insert all the records to the excel file with today's timestemp.
+
+
+
+debugging your code 
+----------------------
+
+using pdb library  ( pdb = python debugger )
+
+There are two ways of using pdb library
+
+- using anaconda spyder
+- manually importing pdb	
+
+
+
+re library    (   re library in python =    grep + awk + sed in linux )
+--------------------------------------------------------------------------------
+
+-search for the patterns
+-match for the paterns ( at the beginning of the string )
+- findall
+- split
+- sub ( replacing patterns )
+
+
+metacharacters (or) wildcard characters    ( common across all the languages )
+---------------------------------------
+^   $    *   +   ?    .  ()   {}    []  \d  \s \w
+
+
+
+
+rest api
+-------------
+
+- URL to access
+- endpoint
+- authentication details
+
+
+
+
+
+
+
+
 
 
 
