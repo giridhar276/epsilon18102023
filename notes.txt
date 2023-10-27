@@ -363,6 +363,10 @@ step4: fetch output
 step5: close the database
 
 
+
+
+
+
 write a program to connect to the database and insert all the records to the excel file with today's timestemp.
 
 
@@ -405,6 +409,22 @@ rest api
 
 
 
+user definied function | subroutine | definition | block
+------------------------------------------------------------
+- code reusability
+- define the code once and call it for multiple times to reduce the duplication
+
+
+different ways of passing arguments
+-----------------------------------------
+-fixed arguments
+-default arguments
+-keyword arguments
+-variable length arguments
+
+
+Every OS contains some list of processes that are running.
+Every process contains set of system calls.
 
 
 
