@@ -429,6 +429,53 @@ Every process contains set of system calls.
 
 
 
+pickle library - used to serialized and deserialize the object
+               - we can save the state of the object
+
+
+
+There are two ways of programming
+
+- procedural programming ( top down approach)
+- object oriented programming ( class and object )
+
+
+object oriented programming
+--------------------------------------
+- class
+- object
+- escapsulation
+- data hiding
+- inheritance
+- polymorphism
+   - function overloading
+   - operator overloading
+
+
+
+class
+------
+class is blueprint of the model
+Every class contains methods and variables
+
+
+object
+------
+object is the instance of the class.
+
+self
+------
+self is the instance of the object.
+
+
+
+
+
+
+
+
+
+
 
 
 
