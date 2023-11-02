@@ -1,0 +1,2684 @@
+Username
+administrator
+
+Password	
+;m4b=k?w&p@93OuXfIqOJV47f.oG%qYV
+#####################################
+
+
+
+data = {
+    "glossary": {
+        "title": "example glossary",
+		"GlossDiv": {
+            "title": "S",
+			"GlossList": {
+                "GlossEntry": {
+                    "ID": "SGML",
+					"SortAs": "SGML",
+					"GlossTerm": "Standard Generalized Markup Language",
+					"Acronym": "SGML",
+					"Abbrev": "ISO 8879:1986",
+					"GlossDef": {
+                        "para": "A meta-markup language, used to create markup languages such as DocBook.",
+						"GlossSeeAlso": ["GML", "XML"]
+                    },
+					"GlossSee": "markup"
+                }
+            }
+        }
+    }
+}
+
+
+
+#Standard Generalized Markup Language
+print(data['glossary']['GlossDiv']['GlossList']['GlossEntry']['GlossTerm'])
+
+
+
+#XML
+print(data['glossary']['GlossDiv']['GlossList']['GlossEntry']['GlossDef']['GlossSeeAlso'][1])
+
+
+################################################################################################
+
+colors = [
+{
+"colors": "red",
+"values": "#f00"
+},
+{
+"colors": "green",
+"values": "#0f0"
+},
+{
+"colors": "blue",
+"values": "#00f"
+},
+{
+"colors": "cyan",
+"values": "#0ff"
+},
+{
+"colors": "magenta",
+"values": "#f0f"
+},
+{
+"colors": "yellow",
+"values": "#ff0"
+},
+{
+"colors": "black",
+"values": "#000"
+}
+]
+
+
+write a program to display all the colors and its values.
+
+sample output:
+
+red    #ffoo
+yellow  #ff0
+magenta #f0f
+..
+..
+..
+
+
+for item in colors:
+    print(item['colors'],item['values'])
+################################################################################################
+
+
+alist= [
+  {
+    "login": "mojombo",
+    "id": 1,
+    "node_id": "MDQ6VXNlcjE=",
+    
+    
+    
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mojombo",
+    "html_url": "https://github.com/mojombo",
+    "followers_url": "https://api.github.com/users/mojombo/followers",
+    "following_url": "https://api.github.com/users/mojombo/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mojombo/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mojombo/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mojombo/subscriptions",
+    "organizations_url": "https://api.github.com/users/mojombo/orgs",
+    "repos_url": "https://api.github.com/users/mojombo/repos",
+    "events_url": "https://api.github.com/users/mojombo/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mojombo/received_events",
+    "type": "User",
+    "site_admin": False
+  },
+  {
+    "login": "defunkt",
+    "id": 2,
+    "node_id": "MDQ6VXNlcjI=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/2?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/defunkt",
+    "html_url": "https://github.com/defunkt",
+    "followers_url": "https://api.github.com/users/defunkt/followers",
+    "following_url": "https://api.github.com/users/defunkt/following{/other_user}",
+    "gists_url": "https://api.github.com/users/defunkt/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/defunkt/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/defunkt/subscriptions",
+    "organizations_url": "https://api.github.com/users/defunkt/orgs",
+    "repos_url": "https://api.github.com/users/defunkt/repos",
+    "events_url": "https://api.github.com/users/defunkt/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/defunkt/received_events",
+    "type": "User",
+    "site_admin": False
+  }
+]
+
+ write a program to display all the keys and values line by line.
+ 
+ 
+ 
+
+for adict in alist:
+    for key,value in adict.items():
+        print(key.ljust(20),value)
+
+
+################################################################################################
+
+define a dictionary as below
+
+data = {
+"id": "0001",
+"type": "donut",
+"name": "Cake",
+"image":
+{
+"url": "images/0001.jpg",
+"width": 200,
+"height": 200
+},
+"thumbnail":
+{
+"url": "images/thumbnails/0001.jpg",
+"width": 32,
+"height": 32
+}
+}
+
+
+( use  isinstance()   or type() to validate the object)
+write a program to display the below output:
+
+id                : 0001
+type              :donutk
+name              : Cake
+image.width       : 200
+image.height      : 200
+image.url         : images/0001.jpg
+thumbnail.width   : 32
+thumbnail.height  : 32
+thumbnail.url     : images/0001.jpg
+
+
+for key,value in data.items():
+    if isinstance(value,str):    
+        print(key.ljust(20),":",value)  
+    elif isinstance(value,dict):
+        for skey, svalue in value.items():
+            finalkey = key + "." + skey
+            print(finalkey.ljust(20),":",svalue)
+    
+    
+
+################################################################################################
+
+define dictionary as below
+
+
+ydict = {
+  "kind": "youtube#searchListResponse",
+  "etag": "1-m2yskBQFythfE4irbTIeOgYYfBU/PaiEDiVxOyCWelLPuuwa9LKz3Gk",
+  "nextPageToken": "CAUQAA",
+  "regionCode": "KE",
+  "pageInfo": {
+    "totalResults": 4249,
+    "resultsPerPage": 5
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "2-m2yskBQFythfE4irbTIeOgYYfBU/QpOIr3QKlV5EUlzfFcVvDiJT0hw",
+      "id": {
+        "kind": "youtube#channel",
+        "channelId": "UCJowOS1R0FnhipXVqEnYU1A"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "3-m2yskBQFythfE4irbTIeOgYYfBU/AWutzVOt_5p1iLVifyBdfoSTf9E",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Eqa2nAAhHN0"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "4-m2yskBQFythfE4irbTIeOgYYfBU/2dIR9BTfr7QphpBuY3hPU-h5u-4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "IirngItQuVs"
+      }
+    }
+  ]
+}
+
+
+write a program to display all etag  information from the dictionary
+
+1-m2yskBQFythfE4irbTIeOgYYfBU/PaiEDiVxOyCWelLPuuwa9LKz3Gk
+2-m2yskBQFythfE4irbTIeOgYYfBU/QpOIr3QKlV5EUlzfFcVvDiJT0hw
+3-m2yskBQFythfE4irbTIeOgYYfBU/AWutzVOt_5p1iLVifyBdfoSTf9E
+4-m2yskBQFythfE4irbTIeOgYYfBU/2dIR9BTfr7QphpBuY3hPU-h5u-4
+
+################################################################################################
+
+info = [
+  {
+    "name": "Whiskers",
+    "species" : "cat",
+    "foods": {
+      "likes": ["celery", "strawberries"],
+      "dislikes": ["carrots"]
+    }
+  },
+  {
+    "name": "Woof",
+    "species" : "dog",
+    "foods": {
+      "likes": ["dog food"],
+      "dislikes": ["cat food"]
+    }
+  },
+  {
+    "name": "Fluffy",
+    "species" : "cat",
+    "foods": {
+      "likes": ["canned food"],
+      "dislikes": ["dry food"]
+    }
+  }
+]
+
+write a program to display the below output in the list format :
+( append all the 'likes' values to the list )
+
+Output:
+ ["celery", "strawberries", "dog food" ,"canned food"]
+ 
+ 
+data = []
+for item in info:
+    listvalues = item['foods']['likes']
+    data.extend(listvalues)
+print(data)
+
+################################################################################################
+
+data = [
+  {
+    "name": "Meowsy",
+    "species" : "cat",
+    "foods": {
+      "likes": ["tuna", "catnip"],
+      "dislikes": ["ham", "zucchini"]
+    }
+  },
+  {
+    "name": "Barky",
+    "species" : "dog",
+    "foods": {
+      "likes": ["bones", "carrots"],
+      "dislikes": ["tuna"]
+    }
+  },
+  {
+    "name": "Purrpaws",
+    "species" : "cat",
+    "foods": {
+      "likes": ["mice"],
+      "dislikes": ["cookies"]
+    }
+  }
+]
+
+write a program to dispaly the below output :
+Meowsy
+Barky
+Purrpaws
+
+
+for item in data:
+    print(item['name'])
+
+################################################################################################
+
+define list as below
+
+lang  = ["spark","spark","spark","java","unix","unix","python","python"]
+
+write a program to display each Unique item and the no.of times it is repeated
+
+Spark  : 3 times
+java   :  1 time
+unix   :  2 times
+python : 2 times
+
+
+for item in set(lang):
+    print(item.ljust(10), ":",lang.count(item),"times")
+
+################################################################################################
+
+  write a program to display the below IP addresses
+
+  192.168.0.1
+  192.168.0.2
+  192.168.0.3
+  ..
+  ..
+  192.168.0.10
+
+
+for i in range(1,11):
+    print('192.168.0.' + str(i))
+
+
+ip = "192.168.0.{}"
+for i in range(1,11):
+    print(ip.format(i))
+
+################################################################################################
+
+define some list as below
+
+alist = ["google","oracle","microsoft"]
+
+write a program to
+add "http://www"  at the beginning and  
+add ".com" at tht end of the string
+
+#output
+['https://www.google.com','https://www.oracle.com','https://www.microsoft.com']
+
+################################################################################################
+
+
+write a program to display the below IP addresses
+
+192.168.0.1
+192.168.0.2
+192.168.0.3
+..
+..
+192.168.0.10
+192.168.1.1
+192.168.1.2
+192.168.1.3
+..
+..
+192.168.1.10
+
+
+
+ip = "192.168.{}.{}"
+
+for i in range(0,2):
+    for j in range(1,11):
+        print(ip.format(i,j))
+        
+        
+        
+ip = "192.168."
+for i in range(0,2):
+    subip = ip + str(i)    #192.168.0    #192.168.1.
+    for val in range(1,11):
+        finalip = subip + "." +str(val)
+        print(finalip)
+    
+################################################################################################
+
+write a progam to capture filename from the keyboard and display the type of the file
+if the filename is ending with .py  .... display "Its python file"
+if the filename is ending with .pl   .... display "Its perl file"
+If the filename is ending with .c  ....... display "Its C lang file"
+if the filename is ending with .json ...  display "Its json file"
+
+
+################################################################################################
+
+
+write a program to capture any string from the keyboard and perform the below
+
+if the string is defined in uppercase......   convert the string to lower and display it
+
+if the string is defined in lowercase ...... convert the string to upper and display it.
+
+
+################################################################################################
+
+
+https://github.com/giridhar276/epsilon18102023/blob/main/csvfiles.zip
+################################################################################################
+
+
+write a program to read adult.csv and display workclass and education columns only
+
+
+import csv
+with open('adult.csv') as fobj:
+    #converting file object to csv object
+    reader = csv.reader(fobj)
+    for line in reader:
+        workclass = line[1]
+        education = line[3]
+        print("Workclass :",workclass)
+        print("Education :",education)
+        print("---------------------")
+################################################################################
+
+write a program to read adult.csv and display all the disinct workclasses
+
+
+
+        
+        
+import csv
+worklist = []
+with open('adult.csv') as fobj:
+    #converting file object to csv object
+    reader = csv.reader(fobj)
+    # processing
+    for line in reader:
+        workclass = line[1]
+        if workclass not in worklist:
+            worklist.append(workclass)
+    # displaying the output
+    for work in worklist:
+        print(work.strip())
+
+################################################################################
+
+write a program to read adult.csv and display the below output
+
+Total male count  : xxx
+Toral female count: xx
+
+
+
+
+import csv
+malecount = 0
+femalecount = 0
+with open('adult.csv') as fobj:
+    #converting file object to csv object
+    reader = csv.reader(fobj)
+    # processing
+    for line in reader:
+        gender = line[9]
+        if gender == 'Male':
+            malecount +=1
+        elif gender == 'Female':
+            femalecount +=1
+    # displayoutput
+    print("Total male count :",malecount)
+    print("Total female count :",femalecount)
+
+
+################################################################################
+write a program to read adult.csv and display all the disinct workclasses and its count
+
+State-gov  :  xxxx times
+Private    :   xx times
+..
+..
+
+
+
+
+import csv
+worklist = list()
+with open('adult.csv') as fobj:
+    #converting file object to csv object
+    reader = csv.reader(fobj)
+    # processing
+    for line in reader:
+        workclass = line[1]
+        worklist.append(workclass)
+    # displaying the output
+    for work in set(worklist):
+        print(work.strip().ljust(15),worklist.count(work),"times" )
+
+################################################################################
+write a program to read adult.csv and replace United-States with US and write all the lines to backup.csv
+
+
+with open('adult.csv','r') as fobj:
+    with open('backup.csv','w') as fw:
+        for line in fobj:
+            line = line.replace('United-States','US')
+            fw.write(line + "\n")
+
+################################################################################################
+
+
+
+################################################################################################
+
+
+#write a program to read adult.csv and replace United-States with US and write all the lines to backup.csv
+
+
+try:
+    with open('adult1111.csv','r') as fobj:
+        with open('backup.csv','w') as fw:
+            for line in fobj:
+                line = line.replace('United-States','US')
+                fw.write(line )
+except TypeError as err:
+    print("invalid operation")
+except ValueError as err:
+    print("Invalid input")
+except (KeyError,ValueError ) as err:
+    print("Invalid Index or key")
+except Exception as err:
+    print(err)
+
+
+
+
+
+################################################################################################
+
+
+write a program to display all the files and directories line by line with proper exception handling
+
+
+
+import os
+
+try:
+    files = os.listdir()
+    for file in files:
+        print(file)
+except Exception as err:
+    print(err)
+
+
+##########################################################################
+
+write a program to display all the files and directories line by line with proper exception handling from C:
+
+
+
+
+import os
+
+try:
+    files = os.listdir("c:\\")
+    for file in files:
+        print(file)
+except Exception as err:
+    print(err)
+
+##########################################################################
+
+write a program to display only files from the current directory
+
+import os
+
+try:
+    files = os.listdir()
+    for file in files:
+        if os.path.isfile(file):
+            print(file)
+except Exception as err:
+    print(err)
+
+
+
+import os
+
+try:
+    files = os.listdir()
+    for file in files:
+        if os.path.isfile(file):
+            print(file,"is a file")
+        elif os.path.isdir(file):
+            print(file,"is a  directory")
+except Exception as err:
+    print(err)
+
+##########################################################################
+
+write a program to write the output to files.txt with all the files and directories line by line with proper exception handling
+
+
+import os
+
+try:
+    files = os.listdir()
+    with open("files.txt","w") as fw:
+        for file in files:
+            if os.path.isfile(file):
+                print(file)
+                fw.write(file +"\n")
+except Exception as err:
+    print(err)
+    
+    
+##########################################################################
+
+write a program to display all the files and its size line by line 
+
+
+
+import os
+
+try:
+    files = os.listdir()
+    for file in files:
+        if os.path.isfile(file):
+            print(file.ljust(20),os.path.getsize(file),"bytes")
+except Exception as err:
+    print(err)
+
+##########################################################################
+
+
+
+write a program to create 10 directories as below in the current directory
+- before creating check whether the directory with that name or not
+  if the directory is not existing then only create the directory
+
+dir1
+dir2
+..
+..
+dir10
+
+
+import os
+
+try:
+    for val  in range(1,11):
+        dirname = "dir" + str(val)
+        if not os.path.isdir(dirname):
+            os.mkdir(dirname)
+            print(dirname,"created")
+        else:
+            print(dirname,"already exists")
+except Exception as err:
+    print(err)
+
+##########################################################################
+write a program to remove 10 directories as below in the current directory
+
+
+
+
+import os
+
+try:
+    for val  in range(1,11):
+        dirname = "dir" + str(val)
+        if  os.path.isdir(dirname):
+            os.rmdir(dirname)
+            print(dirname,"removed")
+        else:
+            print(dirname,"not found")
+except Exception as err:
+    print(err)
+    
+
+
+###################################################################################
+
+write a program to display the below information
+
+1) current working directory   
+2) login name
+3) current process id
+4) current python version
+5) all the libraries available in python
+6) all the environment variables
+7) operating system name
+8) platform name
+9)current date and time
+10)statistics of adult.csv file   ( display accessed tile , modified time, filesize )
+11)create empty file with today's timestamp	  ( Eg: 21_Sep_2023.csv )
+
+
+
+import platform
+import os
+import sys
+import datetime
+import time
+#current working directory  
+print(os.getcwd())
+#login name
+print(os.getlogin())
+# current process id
+print(os.getpid())
+#current python version
+print(platform.python_version())
+print(sys.version)
+# all the libaries
+print(sys.modules)
+#all the environment variables
+print(os.environ)
+#operating system name
+print(os.name)
+print(platform.platform())
+# curretn date
+print(datetime.date.today())
+print(datetime.datetime.now())
+
+# get stas
+print(os.stat('adult.csv'))
+
+filename = time.strftime("%d_%b_%Y.log")
+fobj = open(filename,"w")
+fobj.close()
+
+
+######################################################################
+create two folders as below in the local directory
+source       :  ( copy few files to the source folder)
+destination  :  --- will be empty --
+
+write a program to copy all the files from source folder to destination folder
+
+
+
+
+import shutil
+import os
+
+try:
+    source = r"C:\Users\Administrator\Desktop\programs\source"
+    
+    destination = r"C:\Users\Administrator\Desktop\programs\destination"
+    
+    
+    for file in os.listdir(source):
+        shutil.copy(source + "\\" + file, destination)
+        print(source +file ,"copied to ",destination)
+        
+except Exception as err:
+    print(err)
+########################################################################
+
+write a program to display the below information  ( use platform library)
+
+machine name  ( eg:  AMD64 )
+node name
+OS name ( Eg:  'Windows-10-10.0.19041-SP0' 
+processor
+python version  
+system info ( eg: 'Linux', 'Darwin', 'Java', 'Windows'. )
+
+#########################################################################
+
+write a program to display the below information  ( psutil library)
+
+-CPU percentage
+-virtual memory
+-swap memory
+-disk partitions
+-disk usage
+-display boot time
+- users who are logged in
+- display all the processes running
+
+
+#########################################################################
+
+
+write a program to read https://www.google.com/ and display all the
+available links in that wegpage
+
+output :
+https://mail.google.com/mail/&ogbl
+https://www.google.com/imghp?hl=en&ogbl
+https://www.google.com/?authuser=0
+..
+..
+..
+
+
+
+
+
+
+
+
+
+
+
+
+################################################################################################
+################## frequently used builtin libraries ##################################
+################################################################################################
+# ###################
+# os         : os level activities
+# math       : mathematical operations
+# sys        :  sys and python config data
+# shutil     : copy,move, rmtree  etc
+# urllib     : read the web, downloading the files
+# logging    : logging all the events
+# smtplib    : sending the mails
+# ftplib     : performing ftp operations
+# sysconfig  :  sys and python config data
+# zipfile    : create/extract the zip files
+# rarfile    : create/extract the rar files
+# cryptopgraphy : encrypting and decrypting the data or files
+# tarfile    : create/extract the tar files
+# filecmp    : comparing files or directories
+# sqlite3    : python default database
+# csv        : reading/writing csv files
+# xml        : reading/writing xml files
+# calendar   : display month,year calendar info
+# datetime   : working with date n time
+# time       : working with date n time
+# fractions  : working with decimal values
+# glob       : display all the files
+# heapq      : more of array operations ( getting largest among list )
+# subprocess : executing system commands in python (  subprocess.getoutput("ls -ltr")
+# pdb        : python debugger
+# platform   : platform information
+# random     : random operations ( shuffling , random digit ... )
+# re         : grep + awk + sed
+# socket     : networking programming
+# stat       : stats of the file
+# statistics : basic statistics
+# telnetlib  : accessing remote servers
+    
+    
+
+
+
+
+
+
+
+https://dev.mysql.com/downloads/file/?id=523567
+https://dev.mysql.com/get/Downloads/MySQLInstaller/mysql-installer-community-8.0.35.0.msi
+
+
+
+
+
+#############################################
+## mysql steps
+#############################################
+
+
+#step1 : 
+show databases ;
+
+#step2: creating your database
+create database epsilon;
+
+#step3: acces your database
+use epsilon;
+
+#step4:
+create table adultinfo ( workclass varchar(200) , education varchar(200), occupation varchar(500));
+
+
+#step5: inserting records
+insert into adultinfo values('public','MS','Engineer');
+insert into adultinfo values('private','mbbs','doctor');
+
+
+#step6:
+select * from adultinfo;
+
+
+
+
+
+#modify column data type
+#-------------------------------------------------------------
+
+alter table adultinfo modify  workclass varchar(500) ;
+
+
+
+
+
+
+import pymysql
+
+#step1
+
+try:
+    db = pymysql.connect(host='127.0.0.1',port=3306,user='root',password='yourpassword')
+    #print(db)
+    # create cursor
+    cursor = db.cursor()
+    #step2
+    query = "select * from epsilon.adultinfo"
+    #step3
+    cursor.execute(query)
+    #step4
+    for record in cursor.fetchall():
+        print(record)
+    #step5
+    db.close()
+except Exception as err:
+    print(err)
+
+
+
+
+
+######################################
+# insert record
+##################################################
+
+
+import pymysql
+
+#step1
+
+try:
+    #step1
+    db = pymysql.connect(host='127.0.0.1',port=3306,user='root',password='yourpassword',database='epsilon')
+    #print(db)
+    # create cursor
+    cursor = db.cursor()
+    #step2
+    query = "insert into adultinfo values('{}','{}','{}')".format('private','BS','banker')
+    #step3
+    cursor.execute(query)
+    #step4
+    print(cursor.rowcount,"record inserted")
+    db.commit()
+    #step5
+    db.close()
+except Exception as err:
+    print(err)
+
+
+
+
+###########################################################################################################################################################
+
+( reading from the file and inserting to the database)
+write a program to read adult.csv and insert workclass,occupation,education columns data   to the database with exception handling and validations whereever it is required.
+
+###########################################################################################################################################################
+
+import os
+import pymysql
+import csv
+#step1
+
+try:
+    #step1
+    db = pymysql.connect(host='127.0.0.1',port=3306,user='root',password='yourpassword',database='epsilon')
+    #print(db)
+    # create cursor
+    cursor = db.cursor()
+    #step2
+    rowcount = 0
+    filename = 'adult.csv'
+    if os.path.isfile(filename) and os.path.getsize(filename) > 0 :
+        with open('adult.csv')  as fobj:
+            reader = csv.reader(fobj)
+            for line in reader:
+                    
+                query = "insert into adultinfo values('{}','{}','{}')".format(line[1],line[6],line[3])
+                #step3
+                cursor.execute(query)
+                
+                #step4
+                rowcount = rowcount  + 1
+        print(rowcount,"records inserted")
+    else:
+        print('file not found.. please check')
+    db.commit()
+    #step5
+    db.close()
+except Exception as err:
+    print(
+    
+
+
+###########################################################################################################################################################
+
+
+write a program to connect to the database and insert all the records to the excel file with today's timestemp.
+
+import pymysql
+from openpyxl import Workbook
+import time
+wb = Workbook()
+#step1
+
+try:
+    filename = time.strftime('%d_%b_%Y.xlsx')
+    db = pymysql.connect(host='127.0.0.1',port=3306,user='root',password='giri@123')
+    #print(db)
+    # create cursor
+    cursor = db.cursor()
+    #step2
+    # grab the active worksheet
+    ws = wb.active
+    query = "select * from epsilon.adultinfo"
+    #step3
+    cursor.execute(query)
+    #step4
+    for record in cursor.fetchall():
+        ws.append(record)
+    #step5
+    db.close()
+    wb.save(filename)
+except Exception as err:
+    print(err)
+
+
+###########################################################################################################################################################
+
+languages.txt
+---------------------
+
+python
+pytttthon programming
+python programming
+pytttttttthon programming
+python programming
+pytttttttttttttttttthon programming
+pytttttthon programming
+python
+jython
+mython
+qython
+rython
+pyhon programming
+python
+java and unix
+unix and perl
+python programming
+unix shell scripting
+
+
+
+
+
+
+
+
+
+
+
+with open("languages.txt","r") as fobj:
+    for line in fobj:
+        if 'python' in line or 'pytttthon' in line or 'pytttttthon' in line:
+            print(line.strip())
+            
+            
+#  ^ : at match at the beginning of the string          
+import re    
+with open("languages.txt","r") as fobj:
+    for line in fobj:
+        if re.search('^python',line):
+            print(line.strip())
+            
+            
+#  $ : at match at the end of the string          
+import re    
+with open("languages.txt","r") as fobj:
+    for line in fobj:
+        if re.search('python$',line):
+            print(line.strip())            
+            
+#  * : zero or more occurences of preceding character            
+import re    
+with open("languages.txt","r") as fobj:
+    for line in fobj:
+        if re.search('pyt*hon',line):
+            print(line.strip())            
+                        
+            
+          
+#  + : one  or more occurences of preceding character            
+import re    
+with open("languages.txt","r") as fobj:
+    for line in fobj:
+        if re.search('pyt+hon',line):
+            print(line.strip())  
+            
+            
+#  {min,max} : min to max occurences of preceding character            
+import re    
+with open("languages.txt","r") as fobj:
+    for line in fobj:
+        if re.search('pyt{2,5}hon',line):
+            print(line.strip())            
+            
+            
+# . - any single character or digit
+import re    
+with open("languages.txt","r") as fobj:
+    for line in fobj:
+        if re.search('.ython',line):
+            print(line.strip())   
+            
+            
+# [abcmq]ython  -  aython  bython cython mython qython
+# [characters] - any single character
+import re    
+with open("languages.txt","r") as fobj:
+    for line in fobj:
+        if re.search('[mjrq]ython',line):
+            print(line.strip())   
+            
+            
+            
+# (word1|word2) - grouping
+import re    
+with open("languages.txt","r") as fobj:
+    for line in fobj:
+        if re.search('(python|java)',line):
+            print(line.strip())
+
+
+
+            
+
+################################### re examples ################################
+
+import re
+
+line  = "The rain in Spain"
+x = re.findall("ai", line)
+print(x)
+
+
+
+
+
+line = "The rain in Spain"
+x = re.findall("Portugal", line)
+print(x)
+
+
+import re
+string = 'hello 12 hi 89. Howdy 34'
+pattern = '\d+'
+result = re.findall(pattern, string)
+print(result)
+
+
+import re
+string = 'Twelve:12 Eighty nine:89.'
+pattern = '\d+'
+result = re.split(pattern, string)
+print(result)
+
+
+
+
+
+
+import re
+# multiline string
+string = 'abc    12de 23 \n f45 6'# matches all whitespace characters
+pattern = '\s+'
+replace = ' '
+new_string = re.sub(pattern, replace, string)
+print(new_string)
+
+
+
+
+
+
+
+import re
+string = '39801 356, 2102 1111'
+pattern = '(\d{3}) (\d{2})'
+match = re.search(pattern, string)
+if match:
+  print(match.group())
+else:
+  print("pattern not found")
+
+
+
+
+
+import re
+
+regex = '[\w]+@[\w]+'
+
+email = "giridhar276@gmail.com"
+
+if re.search(regex,email):
+    print("valid email")
+else:
+    print("Invalid email")
+
+
+
+#firstname.lastname@gmail.com
+#firstname-lastname@gmail.com
+#firstname@gmail.com
+
+
+import re
+regex = '^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$'
+email = "giridhar276gmail.com"
+
+if re.search(regex,email):
+    print("valid email")
+else:
+    print("Invalid email")
+
+
+
+
+
+
+
+
+
+
+
+
+import requests
+import json
+try:
+    url = "https://api.github.com/"
+    response = requests.get(url)
+    #print(type(response.text))
+    data = json.loads(response.text)
+    for key,value in data.items():
+        print(key.ljust(20),value)
+except Exception as err:
+    print(err)
+            
+            
+            
+            
+
+
+
+
+import requests
+import json
+try:
+    url = "https://api.github.com"
+    endpoint = '/user'
+    finalurl = url + endpoint
+    username = "yourusername"
+    token = "yourtoken"
+    response = requests.get(finalurl,auth=(username,token))
+    #print(type(response.text))
+    data = json.loads(response.text)
+    for key,value in data.items():
+        print(key.ljust(20),value)
+except Exception as err:
+    print(err)
+
+
+            
+            
+            
+            
+            
+            
+
+
+import requests
+import json
+
+url = "https://api.github.com"
+finalurl = url + "/gists"
+user = "urusername"
+token = "urtoken"
+print("checking ", url, "using user:", user)
+
+local_file = "urexistingfile"
+# read the file tht you wish to upload in the string
+with open(local_file) as fh:
+    mydata = fh.read()
+# payload 
+files = {
+    "description": "rest api - giri testing",
+    "public": "true",
+    "user" : user,
+    "files": {
+    local_file: {
+    "content": mydata
+        }
+      }
+}
+                            # converting dict to json
+r1 = requests.post(finalurl, data=json.dumps(files), auth=(user,token))
+#print(r1.json())
+data = json.loads(r1.text)
+for key,value in data.items():
+    print(key.ljust(20),value)
+
+
+
+
+
+
+
+#############################
+
+
+import requests
+import json
+r = requests.get('https://api.github.com/users/giridhar276/gists', auth=('username','urtoken'))
+print(r.status_code)
+
+
+info = json.loads(r.text)
+print(info)
+for item in info:
+    server = "https://api.github.com"
+    gid = item["id"]
+    user='ursername'
+    url = server + "/gists/" + gid
+    r1 = requests.delete(url, auth=(user,'token'))
+    print(r1)
+    print(r1.text)
+    
+
+
+blist = []
+alist = ["google", "yahoo", "gmail"]
+display = lambda x : "www." + x + ".com"
+for list in alist:
+    blist.append(display(list))
+print(blist)        
+            
+            
+            
+            
+            
+https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-7.0.2-signed.msi
+
+
+
+
+            
+pip install pwinput
+
+
+
+#####################################
+### creating database
+########################################
+import pymongo
+
+# creating the connection
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+
+# creating the database
+mydb = myclient["housing"]
+
+# displaying all databases
+dblist = myclient.list_database_names()
+print(dblist)
+            
+            
+            
+            
+            
+import pymongo
+
+# establishing your connection
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+mydb = myclient["mydatabase"]    # creating your database
+mycol = mydb["customers"]        #creating table
+print(mydb.list_collection_names())
+
+
+
+download and extract the file to your local folder:
+
+https://github.com/giridhar276/epsilon18102023/blob/main/realestate_csv.zip
+
+
+################## reading from file and inserting all the reords ####################
+
+import pymongo
+import json
+# create the connection
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+# create database
+mydb = myclient["realestate"]
+# create table
+mycol = mydb["staff"]
+
+# reading the file
+with open('realestate_csv.json')  as f:
+    # returns JSON object as  a dictionary 
+    data = json.load(f) 
+
+### inserting all the records
+x = mycol.insert_many(data)
+
+#print list of the _id values of the inserted documents:
+#print(x.inserted_ids)
+
+## select query ( displaying all the records)
+for x in mycol.find():
+    print(x)
+    print("--------------")
+
+dblist = myclient.list_database_names()
+print(dblist)
+
+print(mydb.list_collection_names())
+
+
+
+
+
+
+
+
+#######################
+import pymongo
+
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+mydb = myclient["mydatabase"]
+mycol = mydb["customers1"]
+
+mylist = [
+  { "_id": 1, "name": "John", "address": "Highway 37"},
+  { "_id": 2, "name": "Peter", "address": "Lowstreet 27"},
+  { "_id": 3, "name": "Amy", "address": "Apple st 652"},
+  { "_id": 4, "name": "Hannah", "address": "Mountain 21"},
+  { "_id": 5, "name": "Michael", "address": "Valley 345"},
+  { "_id": 6, "name": "Sandy", "address": "Ocean blvd 2"},
+  { "_id": 7, "name": "Betty", "address": "Green Grass 1"},
+  { "_id": 8, "name": "Richard", "address": "Sky st 331"},
+  { "_id": 9, "name": "Susan", "address": "One way 98"},
+  { "_id": 10, "name": "Vicky", "address": "Yellow Garden 2"},
+  { "_id": 11, "name": "Ben", "address": "Park Lane 38"},
+  { "_id": 12, "name": "William", "address": "Central st 954"},
+  { "_id": 13, "name": "Chuck", "address": "Main Road 989"},
+  { "_id": 14, "name": "Viola", "address": "Sideway 1633"}
+]
+
+x = mycol.insert_many(mylist)
+
+#print list of the _id values of the inserted documents:
+print(x.inserted_ids)
+
+#########################################
+
+
+
+url
+----
+https://535999565191.signin.aws.amazon.com/console
+
+username :  yourusername
+password :  Password@1
+
+
+
+user2 giri
+user3 Bobby
+user4 mohammed
+user14 Chris Partridge
+user6
+user15 Doug Fink
+user8 Bob Hazlewood (working)
+user19 vijaya
+user18 Mike Ginter
+user11 Vijay
+user12
+user13
+
+
+
+
+
+(base) C:\Users\Administrator>aws configure --profile user2
+File association not found for extension .py
+
+AWS Access Key ID [****************MKSL]: 
+
+AWS Secret Access Key [****************4+BM]: 
+
+Default region name [ap-south-1]: ap-south-1
+
+
+Default output format [json]: json
+
+
+
+https://awscli.amazonaws.com/AWSCLIV2.msi
+
+
+https://github.com/giridhar276/epsilon18102023/blob/main/awsboto.pdf
+
+
+
+
+###################
+steps
+###################
+
+
+step1: ( in anaconda prompt)
+pip install boto3
+pip install awscli
+
+
+step2 :  ( from aws console)
+download access key and secret key from iam(aws console)
+
+step3: ( configuring)
+Open anaconda prompt and execute the below
+aws configure --profile username
+
+
+
+AWS Access Key ID [****************MKSL]: XXXXXX
+
+AWS Secret Access Key [****************4+BM]:  XXXXXXXXX
+
+Default region name [ap-south-1]: ap-south-1
+
+Default output format [json]: json
+
+
+
+
+
+
+
+
+
+https://github.com/giridhar276/epsilon18102023/blob/main/awsboto.pdf
+
+
+
+
+####################################################################################### 
+
+import boto3
+s3 = boto3.session.Session(profile_name ='user2')
+print(s3)
+
+
+
+
+
+
+
+
+
+import boto3
+
+region = 'us-west-2'
+
+#step1
+session = boto3.session.Session(region_name=region,profile_name='yourprofilname')
+
+
+# Create a Boto3 client for S3
+s3 = session.client('s3', region_name=region)
+
+# List all S3 buckets
+response = s3.list_buckets()
+
+# Display bucket names
+print("List of S3 buckets:")
+for bucket in response['Buckets']:
+    print(f"- {bucket['Name']}")
+    
+    
+    
+
+
+---------
+
+import boto3
+
+region = 'us-west-2'
+
+#step1
+session = boto3.session.Session(region_name=region,profile_name='user11')
+
+# Create a Boto3 client for S3
+s3 = session.client('s3', region_name=region)
+
+# List all S3 buckets
+response = s3.list_buckets()
+
+# Display bucket names
+print("List of S3 buckets:")
+for bucket in response['Buckets']:
+    print(f"- {bucket['Name']}")
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+##################### dislay all the buckets ##############
+
+
+## display buckets
+import boto3
+
+AWS_REGION = "ap-south-1"
+
+session=boto3.session.Session(profile_name="yourname")
+
+client = session.client("s3", region_name=AWS_REGION)
+
+response = client.list_buckets()
+
+print("Listing Amazon S3 Buckets:")
+
+for bucket in response['Buckets']:
+    print(f"-- {bucket['Name']}")
+    
+    
+    
+    
+    
+    
+    
+    
+################ create bucket  
+
+import boto3
+
+AWS_REGION = "ap-south-1"
+
+
+session=boto3.session.Session(profile_name="user2")
+client = session.client("s3", region_name=AWS_REGION)
+bucket_name = "giri30102023"
+location = {'LocationConstraint': AWS_RE
+
+response = client.create_bucket(Bucket=bucket_name, CreateBucketConfiguration=location)
+
+print("Amazon S3 bucket has been created")
+
+
+    
+    
+    
+    
+    
+### uploading files to s3 bucket
+
+import boto3
+from glob import glob
+
+
+
+AWS_REGION = "ap-south-1"
+S3_BUCKET_NAME = "yourbucket"
+
+session=boto3.session.Session(profile_name="youruser")
+s3_client = session.client("s3", region_name=AWS_REGION)
+
+
+def upload_file(file_name, bucket, object_name=None, args=None):
+    if object_name is None:
+        object_name = file_name
+
+    s3_client.upload_file(file_name, bucket, object_name, ExtraArgs=args)
+    print(f"'{file_name}' has been uploaded to '{S3_BUCKET_NAME}'")
+
+
+files = glob("*.py")
+print(files)
+
+for file in files:
+    upload_file(file, S3_BUCKET_NAME)    
+    
+    
+    
+    
+    
+#######################################  create ec2 instance
+
+import boto3
+
+# Replace these values with your own
+region = 'ap-south-1'  # Replace with your region
+image_id = 'ami-0287a05f0ef0e9d9a'  # Replace with your AMI ID
+instance_type = 't2.micro'  # Replace with your instance type
+
+session=boto3.session.Session(profile_name="ursername")
+# Create a Boto3 client for EC2
+ec2 = session.client('ec2', region_name=region)
+
+# Create the instance
+response = ec2.run_instances(
+    ImageId=image_id,
+    InstanceType=instance_type,
+    MinCount=1,
+    MaxCount=1
+)
+
+# Print the instance id
+print(f"Instance ID: {response['Instances'][0]['InstanceId']}")
+
+    
+    
+    
+    
+#################################### display all the ec2 instances
+
+
+
+
+import boto3
+
+region = 'ap-south-1'
+session=boto3.session.Session(profile_name="user2")
+# Create a Boto3 client for EC2
+ec2 = session.client('ec2', region_name=region)
+
+
+# Retrieve all instances
+response = ec2.describe_instances()
+
+# Display instance status
+print("List of EC2 Instances and their status:")
+for reservation in response['Reservations']:
+    for instance in reservation['Instances']:
+        print(f"Instance ID: {instance['InstanceId']}, Instance State: {instance['State']['Name']}")
+
+    
+
+
+
+
+
+
+
+################## to shutdown all the instnn #######################################################
+
+import boto3
+
+region = 'ap-south-1'
+session=boto3.session.Session(profile_name="user2")
+# Create a Boto3 client for EC2
+ec2 = session.client('ec2', region_name=region)
+
+
+# Retrieve all instances
+response = ec2.describe_instances()
+
+# Stop all running instances
+for reservation in response['Reservations']:
+    for instance in reservation['Instances']:
+        if instance['State']['Name'] == 'running':
+            instance_id = instance['InstanceId']
+            ec2.stop_instances(InstanceIds=[instance_id])
+            print(f"Stopping Instance with ID {instance_id}")
+            
+            
+            
+            
+            
+            ################## to shutdown all the instnn #######################################################
+
+import boto3
+
+region = 'ap-south-1'
+session=boto3.session.Session(profile_name="user2")
+# Create a Boto3 client for EC2
+ec2 = session.client('ec2', region_name=region)
+
+
+# Retrieve all instances
+response = ec2.describe_instances()
+
+# Stop all running instances
+for reservation in response['Reservations']:
+    for instance in reservation['Instances']:
+        if instance['State']['Name'] == 'running':
+            instance_id = instance['InstanceId']
+            ec2.stop_instances(InstanceIds=[instance_id])
+            print(f"Stopping Instance with ID {instance_id}")
+            
+            
+            
+############################## to restart all the instances
+
+# Restart instances
+
+
+import boto3
+
+region = 'ap-south-1'
+session=boto3.session.Session(profile_name="user2")
+# Create a Boto3 client for EC2
+ec2 = session.client('ec2', region_name=region)
+
+
+# Retrieve all instances
+response = ec2.describe_instances()
+
+# Restart instances
+for reservation in response['Reservations']:
+    for instance in reservation['Instances']:
+        instance_id = instance['InstanceId']
+        ec2.stop_instances(InstanceIds=[instance_id])
+        waiter = ec2.get_waiter('instance_stopped')
+        waiter.wait(InstanceIds=[instance_id])
+        ec2.start_instances(InstanceIds=[instance_id])
+        print(f"Restarting Instance with ID {instance_id}")
+            
+            
+            
+            
+            
+############################################
+https://opensource.com/sites/default/files/gated-content/cheat_sheet_pip.pdf
+############################################
+
+
+
+
+
+############ creating users #############
+import boto3
+session = boto3.session.Session(profile_name = 'user2')
+response = session.resource(service_name = 'iam')
+print(response)
+
+for val in range(30,40):
+    output = response.create_user(UserName= 'giri' + str(val))
+    print("user" + str(val) ,"created")
+    
+    
+    
+    
+    
+    
+
+import boto3
+
+iam_user='input("Enter you IAM User name to get datials like ID,ARN,CREATION DATE: ")'
+session=boto3.session.Session(profile_name="user2")
+iam_re=session.resource(service_name="iam",region_name="us-south-1")
+
+try:
+  for eacg in iam_re.groups.all():
+      print(eacg)
+except Exception as e:
+  print(e.response['Error']['Code'])
+
+
+
+
+import boto3
+
+iam_user='input("Enter you IAM User name to get datials like ID,ARN,CREATION DATE: ")'
+session=boto3.session.Session(profile_name="user2")
+iam_re=session.resource(service_name="iam",region_name="us-south-1")
+
+try:
+  for eacg in iam_re.groups.all():
+      print(eacg)
+except Exception as e:
+  print(e.response['Error']['Code'])
+
+
+    
+    
+##################### create snapshots
+
+import boto3
+
+region = 'ap-south-1'
+session=boto3.session.Session(profile_name="user2")
+# Create a Boto3 client for EC2
+ec2 = session.client('ec2', region_name=region)
+
+
+volume_id = 'vol-00740d547ed880c5a'
+
+# Create the snapshot
+response = ec2.create_snapshot(
+    VolumeId=volume_id,
+    Description='This is a snapshot created by user2'
+)
+
+print(response)
+
+
+
+
+
+
+##################### describe snapshots
+    
+import boto3
+
+region = 'ap-south-1'
+session=boto3.session.Session(profile_name="user2")
+# Create a Boto3 client for EC2
+ec2 = session.client('ec2', region_name=region)
+
+# List all snapshots
+response = ec2.describe_snapshots()
+
+
+print(response)
+# Print the snapshot information
+for snapshot in response['Snapshots']:
+    print(f"Snapshot ID: {snapshot['SnapshotId']}")
+    print(f"Volume ID: {snapshot['VolumeId']}")
+    print(f"Description: {snapshot['Description']}")
+    print(f"Status: {snapshot['State']}")
+    print(f"Start Time: {snapshot['StartTime']}")
+    print(f"Progress: {snapshot['Progress']}")
+    print("------------------------------")
+    print("-------------------------------")
+    
+    
+    
+    
+    
+    
+    
+##### display all users
+import boto3
+import datetime
+session=boto3.session.Session(profile_name="user2")
+iam_con_re=session.resource(service_name="iam")
+#Get details of any iam user
+'''
+iam_user_ob=iam_con_re.User("s3_developer")
+print(iam_user_ob.user_name,iam_user_ob.user_id,iam_user_ob.arn,iam_user_ob.create_date.strftime("%Y-%m-%d"))
+'''
+for iam_user_ob in iam_con_re.users.all():
+    print(iam_user_ob)
+    print(iam_user_ob.user_name,iam_user_ob.user_id,iam_user_ob.arn,iam_user_ob.create_date.strftime("%Y-%m-%d"))
+    print("----------------------------")
+    
+    
+    
+    
+    
+    
+    
+###### display all the instances with filter
+# collections
+
+import boto3
+aws_mag_con=boto3.session.Session(profile_name="user2")
+ec2_con_re=aws_mag_con.resource(service_name="ec2",region_name="ap-south-1")
+f1={"Name": "instance-state-name", "Values":['stopped']}
+f2={"Name":"instance-type","Values":['t2.micro']}
+for each in ec2_con_re.instances.filter(Filters=[f1,f2]):
+	print(each)
+  
+  
+  
+  
+step1:
+open anaconda prompt
+
+step2:
+conda create -n dev_env python==3.11.5
+
+step3:
+conda activate dev_env
+
+
+
+downloadable link
+----------------
+https://www.python.org/ftp/python/3.12.0/python-3.12.0-amd64.exe
+
+
+    
+    
+    
+    
+steps to create virtual environment in IDLE ( default python)
+---------------------------------------------------------------------
+step1:
+https://www.python.org/ftp/python/3.12.0/python-3.12.0-amd64.exe
+
+step2:
+open command prompt(cmd) from the start menu
+
+step3:
+cd Desktop
+
+step3:
+pip install virtualenv
+
+
+step4:
+mkdir myproject
+cd myproject
+
+step5: ( create virtual environment)
+virtualenv myenv1
+
+
+step6:
+.\myenv1\Scripts\activate
+
+step7:( to deactivate)
+deactivate
+
+
+
+
+
+
+
+import pickle
+alist = [10,20,30,40]
+
+# serialization - saving the state of that object
+# pickling the file
+with open("numbers.pkl","wb") as fobj:
+    pickle.dump(alist,fobj)
+    
+    
+# deserialization - reading the actual content from the object
+# unpickling
+with open("numbers.pkl","rb") as fr:
+    loaded_info = pickle.load(fr)
+    print(loaded_info)
+    
+    
+    
+students = {
+  'Student 1': {
+        'Name': "Alice", 'Age' :10, 'Grade':4,},
+    'Student 2': {
+        'Name':'Bob', 'Age':11, 'Grade':5
+    },
+    'Student 3': {
+        'Name':'Elena', 'Age':14, 'Grade':8
+    }
+}
+
+# serialize the dictionary to a pickle file
+with open("student_dict.pkl", "wb") as f:
+    pickle.dump(students, f)
+   
+# deserialize the dictionary and print it out
+
+with open("student_dict.pkl", "rb") as f:
+    deserialized_dict = pickle.load(f)
+    print(deserialized_dict)
+
+
+
+
+###########################################################
+
+import pandas 
+import time
+start = time.time()
+df = pandas.read_csv('adult.csv')
+end = time.time()
+print(end-start,"seconds")
+
+
+# serializing the data to pickle file
+df.to_pickle('mypandasfile.pkl')
+
+
+
+start = time.time()
+df_pkl = pandas.read_pickle('mypandasfile.pkl')
+end = time.time()
+print(end-start,"seconds")
+#print(df_pkl)
+
+
+############################################################
+
+
+
+
+
+# class
+class Employee:
+    def displayEmployee():
+        print("Employee name is ","ram")
+        
+       
+  
+# object creation
+emp1 = Employee()       
+emp1.displayEmployee()  
+
+
+
+
+
+
+
+
+
+
+
+
+class Employee:
+    def getEmployee(self,name):
+        #acts like a local variable
+        self.name = name
+            
+    def displayEmployee(self):
+        print("Employee name is ",self.name)
+        
+       
+  
+# object creation
+emp1 = Employee()    
+emp1.getEmployee('ram')    
+emp1.displayEmployee()     
+
+
+emp2 = Employee()        
+emp2.getEmployee('Robert')    
+emp2.displayEmployee()  
+
+
+emp3 = Employee()        
+emp3.getEmployee('Frank')    
+emp3.displayEmployee() 
+
+ 
+
+
+
+
+################################################
+
+import pymysql
+
+#step1
+
+try:
+    db = pymysql.connect(host='127.0.0.1',port=3306,user='root',password='giri@123')
+    #print(db)
+    # create cursor
+    cursor = db.cursor()
+    #step2
+    query = "select * from epsilon.adultinfo"
+    #step3
+    cursor.execute(query)
+    #step4
+    for record in cursor.fetchall():
+        print(record)
+    #step5
+    db.close()
+except Exception as err:
+    print(err)
+
+
+############################################################
+
+write a object oriented program to display all the records from the database
+############################################################
+
+
+
+import pymysql
+
+class Database:
+    def __init__(self,host,port,user,password):
+        self.host = host
+        self.port= port
+        self.user = user
+        self.password = password
+            
+    def createConnection(self):
+        self.conn = pymysql.connect(host=self.host,port =self.port,user=self.user,password=self.password)
+    def createCursor(self):
+        self.cursor = self.conn.cursor()
+    def displayRecords(self):
+        query ="select * from epsilon.adultinfo"
+        self.cursor.execute(query)
+        for record in self.cursor.fetchall():
+            print(record)
+    def closeConnection(self):
+        self.conn.close()
+        
+
+       
+db1 = Database('127.0.0.1',3306,'root','giri@123')
+db1.createConnection()
+db1.createCursor()
+db1.displayRecords()
+db1.closeConnection()
+
+
+
+#############################################
+
+
+## display buckets
+import boto3
+
+AWS_REGION = "ap-south-1"
+
+session=boto3.session.Session(profile_name="youruser")
+
+client = session.client("s3", region_name=AWS_REGION)
+
+response = client.list_buckets()
+
+print("Listing Amazon S3 Buckets:")
+
+for bucket in response['Buckets']:
+    print(f"-- {bucket['Name']}")
+    
+    
+    
+    
+    
+####################################################################################
+
+
+class Bike:
+    def __init__(self, price, max_speed):
+        self.price = price
+        self.max_speed = max_speed
+        self.miles = 0
+
+    def displayInfo(self):
+        print("Bike's Price: ${}".format(self.price))
+        print("Bike Maximum Speed: {} mph".format(self.max_speed))
+        print("Total Miles Ridden: {} miles".format(self.miles))
+        return self
+
+    def ride(self):
+        print("Riding...")
+        self.miles = self.miles +  10
+        return self
+
+    def reverse(self):
+        if self.miles < 6:
+            print("Cannot reverse bike that hasn't been ridden forward")
+        else:
+            self.miles = self.miles -  5
+            print("Reversing")
+        return self
+
+if __name__ == "__main__":
+    bike1 = Bike(5000, 250)
+    bike2 = Bike(500, 35)
+    bike3 = Bike(50, 2)
+    
+    print ("Bike 1")
+    bike1.ride().ride().ride().reverse().displayInfo()
+    print ("Bike 2")
+    bike2.ride().ride().reverse().reverse().displayInfo()
+    print ("Bike 3")
+    bike3.reverse().reverse().reverse().displayInfo()
+
+
+#####################################################################################################################
+
+
+class Call:
+    def __init__(self, id, name, phone_number, time_of_call, reason_for_call):
+        self.id = id
+        self.name = name
+        self.phone_number = phone_number
+        self.time_of_call = time_of_call
+        self.reason_for_call = reason_for_call
+
+    def display(self):
+        print("ID:", self.id)
+        print("Name:", self.name)
+        print("Phone Number:", self.phone_number)
+        print("Time of call (in HHMM format):", self.time_of_call)
+        print("Reason for call:", self.reason_for_call)
+
+class CallCenter:
+    def __init__(self):
+        self.calls = []
+        self.queue_size = 0
+
+    # def add(self, id, name, phone_number, time_of_call, reason_for_call):
+    #     self.calls.append(Call(id, name, phone_number, time_of_call, reason_for_call))
+
+    def add(self, call):
+        call_list = []
+        call_list.append(call.id)
+        call_list.append(call.name)
+        call_list.append(call.phone_number)
+        call_list.append(call.time_of_call)
+        call_list.append(call.reason_for_call)
+
+        self.calls.append(call_list)
+
+        self.queue_size += 1
+        return self
+
+    def remove(self):
+        self.calls.pop(0)
+        self.queue_size -= 1
+        return self
+
+    def info(self):
+        print('Length of queue:', self.queue_size)
+        for value in self.calls:
+            print("Name:", value[1])
+            print("Phone Number:", value[2])
+
+call1 = Call(1, 'Ash', 123, 1234, 'thanks')
+call1.display()
+call_center = CallCenter()
+call_center.add(call1)
+call_center.info()
+# print call_center.calls
+
+
+
+#############################################################################################
+
+
+
+
+class Patient:
+    def __init__(self, id, name, allergies, bed_number=None):
+        self.id = id
+        self.name = name
+        self.allergies = allergies
+        self.bed_number = bed_number
+
+class Hospital:
+    def __init__(self, name, capacity):
+        self.name = name
+        self.patients = []
+        self.capacity = capacity
+        
+
+    def add(self, patient):
+        if len(self.patients) >= self.capacity:
+            print('Sorry! The Hospital is full!')
+        else:
+            patient_dictionary = {
+            'ID': patient.id,
+            'Name': patient.name,
+            'Allergies': patient.allergies,
+            'Bed Number': patient.bed_number
+            }
+            self.patients.append(patient_dictionary)
+            print ('{} has been admitted.'.format(patient.name))
+
+    def discharge(self, name):
+        for value in self.patients:
+            if value['Name'] == name:
+                value['Bed Number'] = None
+                self.patients.remove(value)
+
+patient1 = Patient(1, 'Ash', 'Wool', 1)
+patient2 = Patient(1, 'Sterling', 'Chocolate', 3)
+patient3 = Patient(1, 'Alish', 'Puppies', 7)
+patient4 = Patient(1, 'Andre', 'Kitties', 9)
+hospital = Hospital('kings Hospital', 3)
+hospital.add(patient1)
+hospital.add(patient2)
+hospital.add(patient3)
+hospital.add(patient4)
+hospital.discharge('Alish')
+hospital.discharge('Sterling')
+hospital.add(patient4)
+
+
+
+
+
+
+####################################################################################################################
+
+
+
+######## scope ##################################
+
+class A:
+    
+    def __init__(self):
+        self.__priv = "I am private"
+        self._prot = "I am protected"
+        self.pub = "I am public"
+        print(self.__priv)        
+
+obj = A()
+
+print(obj.pub)
+print(obj._prot)
+print(obj.__priv)
+    
+
+
+# public    : all the members defined with public can be accessible
+#             anywhere in the program
+# private   : member defined with private(__) can be accessible only
+#             inside the class
+# protected : any member defined with protected(_) can be accessed
+#             in other classes as well
+
+
+
+
+
+
+
+    
+############################# single inheritance ##################### 
+    
+class Date:   # Parent # Base # Super
+    def get_date(self):
+        print("2016-05-14")
+
+
+
+class Time(Date): # Child # inherited
+    def get_time(self):
+        print("08:00:00")
+
+
+
+# Creating an instance from `Date`
+dt = Date()
+dt.get_date()  # Accesing the `get_date()` method of `Date`
+print("--------")
+
+# Creating an instance from `Time`.
+tm = Time()
+tm.get_time()   # Accessing the `get_time()` method from `Time`.
+# Accessing the `get_date() which is defined in the parent class `Date`.
+tm.get_date()
+
+
+
+
+
+
+
+############################## single inheritance ############################
+
+
+
+class Person:
+    # initializing the variables
+    name = ""
+    age = 0
+    # defining constructor
+    def __init__(self, person_name, person_age):
+        self.name = person_name
+        self.age = person_age
+        # defining class methods
+    def show_name(self):
+        print(self.name)
+    def show_age(self):
+        print(self.age)
+
+# definition of subclass starts here
+class Student(Person):
+    studentId = ""
+
+    def __init__(self, student_name, student_age, student_id):
+        #Person.
+        super().__init__(student_name, student_age)
+        self.studentId = student_id
+
+    def get_id(self):
+        return self.studentId  # returns the value of student id
+
+# end of subclass definition
+
+
+
+# Create an object of the superclass
+person1 = Person("Richard", 23)
+# call member methods of the objects
+person1.show_age()
+# Create an object of the subclass
+student1 = Student("Max", 22, "102")
+print(student1.get_id())
+student1.show_name()    
+
+
+
+########################## single inheritance
+
+
+class MyClass:
+
+    def func(self):
+        print("I'm being called from the Parent class")
+
+
+class ChildClass(MyClass):
+
+    def func(self):
+        print("I'm actually being called from the Child class")
+        print("But...")
+        # Calling the `func()` method from the Parent class.
+        super(ChildClass, self).func()
+    
+
+my_instance_2 = ChildClass()
+my_instance_2.func()
+
+
+
+################################
+
+
+
+
+
+class SchoolMember:
+    '''Represents any school member.'''
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        print('(Initialized SchoolMember: {})'.format(self.name))
+
+    def tell(self):
+        '''Tell my details.'''
+        print('Name:"{}" Age:"{}"'.format(self.name, self.age), end=" ")
+
+
+class Teacher(SchoolMember):
+    '''Represents a teacher.'''
+    def __init__(self, name, age, salary):
+        SchoolMember.__init__(self, name, age)
+        self.salary = salary
+        print('(Initialized Teacher: {})'.format(self.name))
+
+    def tell(self):
+        SchoolMember.tell(self)
+        print('Salary: "{:d}"'.format(self.salary))
+
+class Student(SchoolMember):
+    '''Represents a student.'''
+    def __init__(self, name, age, marks):
+        SchoolMember.__init__(self, name, age)
+        self.marks = marks
+        print('(Initialized Student: {})'.format(self.name))
+
+    def tell(self):
+        #SchoolMember.tell(self)
+        print('Marks: "{:d}"'.format(self.marks))
+
+t = Teacher('Mrs. Rita', 40, 30000)
+s = Student('Mr.Ram', 25, 75)
+
+# prints a blank line
+print()
+
+members = [t, s]
+for member in members:
+    # Works for both Teachers and Students
+    member.tell()
+
+
+
+
+
+############## operator overloading ########################
+
+# example of Operator overloading
+
+class Student:
+    def __init__(self,grd):
+        self.grade=grd
+    def __gt__(self, other):
+        return self.grade>other.grade
+
+
+John=Student(11)
+Jack=Student(10)
+print(John>Jack)
+
+
+
+
+
+
+
+
+
+import pdb
+pdb.set_trace()
+name = 'python programming'
+print(name.capitalize())
+print(name.upper())
+print(name.lower())
+print(name.isupper())
+print(name.islower())
+print(name.count('p'))
+print(name.replace('python', 'java'))
+print(name.find('gram'))
+print(name.find("afa")) # if substring is NOT found, returns -1
+aname = '  python '
+print(len(aname))
+print(len(aname.strip()))
+print(len(aname.lstrip()))
+print(len(aname.rstrip()))
+
+string = "I love {} and {}"
+print(string.format('python','java'))
+print(string.format('java','unix'))
+
+bname = 'python:unix:java:oracle'
+print(bname.split(":"))  #converting str to list
+
+
+
+
+
+
+
+
+
+#######################################################
+https://github.com/giridhar276/epsilon18102023/blob/main/Supermart%20Grocery%20Sales%20-%20Retail%20Analytics%20Dataset%20.zip
+##########################################
+
+
+
+
+
+
+    
