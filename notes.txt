@@ -438,9 +438,10 @@ There are two ways of programming
 
 - procedural programming ( top down approach)
 - object oriented programming ( class and object )
+    * global principles common for all the languages like c++,java ,.net etc
 
 
-object oriented programming
+object oriented programming(global principles common for all the languages like c++,java ,.net etc)
 --------------------------------------
 - class
 - object
@@ -448,16 +449,16 @@ object oriented programming
 - data hiding
 - inheritance
 - polymorphism
-   - function overloading
+   - function overloading  ( already covered this in user defined functions)
    - operator overloading
 
 
 
 class
 ------
-class is blueprint of the model
-Every class contains methods and variables
-
+-class is blueprint of the model
+-Every class contains methods(data members) and variables(attributes)
+-class contains definitions(blocks)
 
 object
 ------
@@ -466,6 +467,131 @@ object is the instance of the class.
 self
 ------
 self is the instance of the object.
+
+
+
+inheritance
+---------------
+Extracting the features from parent class to child class is known as inheritance.
+
+Advantage : There is no code duplication ( code reusability)
+
+
+
+
+python tools
+----------------------
+
+- spyder IDE
+- jupyter notebook
+
+
+
+If you want to explore more about analytics
+
+- kaggle.com
+- using cheatsheets,examples
+
+
+python debugging - pdb library
+---------------------------------------
+
+There are 2 ways of using pdb library
+
+method1:  include the below in the code
+---------------------
+import pdb
+
+beginning point to test the code
+pdb.set_trace()
+
+
+method2: execute the code at the command line as below
+python -m pdb hello.py
+
+
+Other different debugging libraries
+-----------------------------------------------
+pdb
+-----
+This is the built-in Python debugger that allows you to step through your code and examine the values of variables at runtime.
+
+ipdb:
+------
+This is an enhanced version of the pdb debugger with support for IPython. 
+It provides features such as syntax highlighting and tab completion, making the debugging process more efficient.
+
+
+pdbpp
+------
+This is another third-party debugger similar to pdb, but with added features like tab completion, syntax highlighting, and support for handling large codebases.
+
+
+pysnooper
+---------------
+
+PySnooper is a modern debugger that automatically logs the values of variables, expressions, and function calls during code execution. It helps developers understand the flow of their program without manually adding print statements.
+
+
+
+vscode:  generally used IDE
+         If you have any environment issues, you have to sort it
+         3000+ libraries are used
+
+
+spyder : spyder IDE is mainly meant for machine learning programs and analytics
+         but also used as a general IDE
+         8000+ libraires which are mainly used in analytics.
+
+
+
+paramiko : for ssh connections
+           transfer the files
+           copy the files
+           execute the commands on remote server
+
+
+netmiko  : network enginners
+           connect with router and switches
+
+
+pywinrm  : manange windows remote mangement
+
+
+boto3 ;aws cloud infra
+
+
+ansible : used from with python using ansible-runner.
+          cloud provisioning,configuraiton amangement
+
+
+fabric : execuitng commands across a set of hosts
+
+
+terraform
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
